@@ -11,7 +11,7 @@ function hideTost() {
 }
 function showTost() {
   tostMessage.classList.add("TostMessageShow");
-  setTimeout(hideTost, 1500);
+  setTimeout(hideTost, 2000);
 }
 function addTodo(e) {
   e.preventDefault();

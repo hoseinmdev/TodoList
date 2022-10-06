@@ -19,7 +19,7 @@
   background-color: var(--primaryColor);
   color: var(--mainWhite);
   border-radius: 8px;
-  border-left: 3px solid var(--mainWhite);
+  border-right: 3px solid var(--mainWhite);
   font-size: 1rem;
   position: fixed;
   right: -100rem;
