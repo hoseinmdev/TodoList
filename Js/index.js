@@ -26,6 +26,7 @@ function addTodo(e) {
   if (todoInput.value != "") {
     todoList.appendChild(todoMaker);
     todoInput.value = "";
+    filterTodos(filterOption.value);
   } else {
     showTost();
   }
@@ -36,18 +37,19 @@ function checkRemove(e) {
   const todo = item.parentElement.parentElement.parentElement;
   if (classList[1] === "fa-check-square") todo.classList.toggle("completed");
   if (classList[1] === "fa-trash-alt") todo.remove();
+  filterTodos(filterOption.value);
 }
-function filterTodos(e) {
+
+function filterTodos(value) {
   const todos = [...todoList.childNodes];
-  const filter = e.target.value;
   todos.forEach((todo) => {
-    if (filter == "all") todo.style.display = "flex";
-    if (filter == "completed") {
+    if (value == "all") todo.style.display = "flex";
+    if (value == "completed") {
       todo.classList.contains("completed")
         ? (todo.style.display = "flex")
         : (todo.style.display = "none");
     }
-    if (filter == "uncompleted") {
+    if (value == "uncompleted") {
       !todo.classList.contains("completed")
         ? (todo.style.display = "flex")
         : (todo.style.display = "none");
@@ -58,4 +60,4 @@ function filterTodos(e) {
 // Events
 todoList.addEventListener("click", checkRemove);
 todoAddButton.addEventListener("click", addTodo);
-filterOption.addEventListener("click", filterTodos);
+filterOption.addEventListener("change", (e) => filterTodos(e.target.value));
