@@ -1,0 +1,118 @@
+@import url(../styles/fonts.css);
+@import url(../styles/tost.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Vazir";
+}
+
+:root{
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #ede9fe;
+    --mainBlack: #222;
+    --mainGray: #7c7c7c;
+    --mainRed: #db2777;
+    --bodyColor: #0f172a;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+
+header{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    color: var(--mainWhite);
+}
+button{
+    cursor: pointer;
+}
+body{
+    font-family: "Vazir";
+    color: var(--mainBlack);
+    background-color: var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.form-container{
+    display: flex;
+    gap: 1rem;
+    
+}
+select{
+    background-color: var(--mainWhite);
+    /* height: 2rem; */
+    padding: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+form{
+    border-radius: 5px;
+    width: 25rem;
+    background-color: var(--mainWhite);
+    display: flex;
+    justify-content: space-between;
+}
+.test{
+    border-radius: 5px;
+    background-color: var(--mainWhite);
+}
+.todo-button{
+    border-radius: 5px;
+}
+form input{
+    flex: 1;
+}
+form input , form button{
+    border: none;
+    outline: none;
+    background-color: var(--mainWhite);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+.todo-button{
+    color: var(--primaryColor);
+    transition: all 0.2s ease-in-out;
+}
+.todo-button:hover{
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+}
+.todo-container{
+    width: 25rem;
+}
+.todo{
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem;
+    margin: 0.4rem 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.todo-childs{
+    display: flex;
+    padding: 0.3em;
+    gap: 0.7rem;
+    cursor: pointer;
+    
+}
+.fa-trash-alt{
+    color: var(--mainRed);
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
