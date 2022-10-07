@@ -27,3 +27,8 @@
 .TostMessageShow {
   right: 0;
 }
+.darkMode .TostMessage{
+  background-color: var(--secondaryColor);
+  color: var(--bodyColor);
+  border-right: 3px solid var(--bodyColor);
+}
