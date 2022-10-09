@@ -158,8 +158,8 @@ form button {
   display: none;
 } 
 .modeChangePlan .fa-sun:hover{
-  background-color: var(--primaryColor);
-  color: var(--bodyColorLightMode);
+  background-color: var(--secondaryColor);
+  color: var(--bodyColor);
   transform: rotate(360deg);
 }
 

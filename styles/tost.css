@@ -27,8 +27,9 @@
 .TostMessageShow {
   right: 0;
 }
-.darkMode .TostMessage{
+.lightMode .TostMessage{
   background-color: var(--secondaryColor);
   color: var(--bodyColor);
   border-right: 3px solid var(--bodyColor);
+  font-weight: 700;
 }
