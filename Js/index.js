@@ -5,13 +5,21 @@ const todoAddButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todolist");
 const filterOption = document.querySelector(".filter-todos");
 const tostMessage = document.querySelector(".TostMessage");
-const changeModeButton = document.querySelector(".ModeChangeBtn");
+const sun = document.getElementById("sun");
+const moon = document.getElementById("moon");
 
 // Functions
-function changeMode(){
-  body.classList.contains("darkMode")
-    ? body.classList.remove("darkMode")
-    : body.classList.add("darkMode");
+function changeModeLight(){
+  // body.classList.contains("lightMode")
+  //   ? body.classList.remove("lightMode")
+  //   : body.classList.add("lightMode");
+  if(!body.classList.contains("lightMode")) body.classList.add("lightMode");
+}
+function changeModeDark() {
+  // body.classList.contains("lightMode")
+  //   ? body.classList.remove("lightMode")
+  //   : body.classList.add("lightMode");
+  if (body.classList.contains("lightMode")) body.classList.remove("lightMode");
 }
 function hideTost() {
   tostMessage.classList.remove("TostMessageShow");
@@ -64,7 +72,8 @@ function filterTodos(value) {
 }
 
 // Events
-changeModeButton.addEventListener("click", changeMode);
+moon.addEventListener("click", changeModeLight);
+sun.addEventListener("click", changeModeDark);
 todoList.addEventListener("click", checkRemove);
 todoAddButton.addEventListener("click", addTodo);
 filterOption.addEventListener("change", (e) => filterTodos(e.target.value));

@@ -79,6 +79,7 @@ form button {
 }
 .form-container {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 .test {
@@ -123,35 +124,69 @@ form button {
   text-decoration: line-through;
   opacity: 0.5;
 }
-
-
-.ModeChangeBtn{
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-family: "Vazir";
-    border-radius: 5px;
-    border: none;
-    background-color: var(--mainWhite);
-    transition: all 0.1s ease-in-out;
+.modeChangePlan{
+  font-size: 2rem;
+  position: absolute;
+  margin-top: -4rem;
+  margin-right: 49rem;
 }
-.darkMode body {
+.modeChangePlan .fa-moon {
+  width: 3rem;
+  height: 3rem;
+  padding: 6px 0px;
+  border-radius: 8px;
+  color: var(--bodyColor);
+  background-color: var(--secondaryColor);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.modeChangePlan .fa-moon:hover{
+  color: var(--primaryColor);
+  transform: rotate(360deg);
+}
+.modeChangePlan .fa-sun {
+  font-size: 1.9rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 8px 0px;
+  border-radius: 10px;
+  background-color: var(--bodyColor);
+  color: var(--bodyColorLightMode);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  display: none;
+} 
+.modeChangePlan .fa-sun:hover{
+  background-color: var(--primaryColor);
+  color: var(--bodyColorLightMode);
+  transform: rotate(360deg);
+}
+
+.lightMode body {
   background-color: var(--bodyColorLightMode);
 }
-.darkMode header {
+.lightMode header {
   color: var(--bodyColor);
 }
-.darkMode .todo-button{
-    color: #0f172a;
+.lightMode .todo-button {
+  color: #0f172a;
 }
-.darkMode .todo-button:hover{
-    background-color: #0f172a;
-    color: var(--mainWhite);
+.lightMode .todo-button:hover {
+  background-color: #0f172a;
+  color: var(--mainWhite);
 }
-.darkMode .todo{
-    color: var(--bodyColor);
+.lightMode .todo {
+  color: var(--bodyColor);
 }
-.darkMode .completed {
+.lightMode .completed {
   text-decoration: line-through;
   background-color: #cbd5e1;
   opacity: 0.5;
 }
+.lightMode .modeChangePlan .fa-sun {
+  display: block;
+} 
+.lightMode .modeChangePlan .fa-moon {
+  display: none;
+} 
